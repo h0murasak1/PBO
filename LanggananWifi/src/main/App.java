@@ -25,7 +25,7 @@ public class App extends Application {
             FXMLLoader loader = new FXMLLoader(App.class.getResource("/views/login.fxml"));
             AnchorPane root = loader.load();
             Scene scene = new Scene(root);
-            scene.getStylesheets().add(Objects.requireNonNull(App.class.getResource("/styles/style.css")).toExternalForm());
+            scene.getStylesheets().add(Objects.requireNonNull(App.class.getResource("/styles/login_style.css")).toExternalForm());
             primaryStage.setScene(scene);
             primaryStage.show();
         } catch (Exception e) {
@@ -39,7 +39,7 @@ public class App extends Application {
             AnchorPane root = loader.load();
 
             Scene scene = new Scene(root);
-            scene.getStylesheets().add(Objects.requireNonNull(App.class.getResource("/styles/style.css")).toExternalForm());
+            scene.getStylesheets().add(Objects.requireNonNull(App.class.getResource("/styles/dashboard_style.css")).toExternalForm());
             primaryStage.setScene(scene);
 
             // Set role-specific visibility

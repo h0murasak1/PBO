@@ -3,6 +3,8 @@ package controllers;
 import database.DBHelper;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import main.App;
 
 import java.sql.Connection;
@@ -44,6 +46,13 @@ public class LoginController {
             }
         } catch (Exception e) {
             e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void handleEnterKey(KeyEvent event) {
+        if (event.getCode() == KeyCode.ENTER) {
+            login();
         }
     }
 }
